@@ -1,0 +1,64 @@
+.logo {
+	position: relative;
+	display: inline-block;
+	padding-left: 70px;
+	margin-top: 0;
+	border: 0;
+	color: $blue;
+	&:hover {
+		color: var(--red);
+		border-bottom-color: var(--red-transparent);
+	}
+	@include r(1160) {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+	}
+	@include r(1000) {
+		padding-left: 65px;
+		max-width: 300px;
+	}
+	@include r(640) {
+		padding-left: 0;
+		max-width: 250px;
+	}
+	&__main {
+		display: block;
+		font-weight: bold;
+		font-weight: 700;
+		font-size: 1.1rem;
+		line-height: 1.4rem;
+		margin: 0;
+		@include r(1000) {
+			font-size: 1.3rem;
+		}
+		@include r(640) {
+			font-size: 1.6rem;
+			margin-bottom: .5rem;
+			line-height: 2rem;
+		}
+	}
+	&__photo {
+		position: absolute;
+		top: -5px;
+		left: 0px;
+		width: 60px;
+		height: 60px;
+		overflow: hidden;
+		border-radius: 50%;
+		@include r(1000) {
+			width: 52px;
+			height: 52px;
+		}
+		@include r(640) {
+			display: none;
+		}
+	}
+	&__img {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+}
+

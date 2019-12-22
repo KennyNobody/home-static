@@ -1,91 +1,103 @@
-<main class="post-body">
-	<h1>
-		<a href="post.html">
-			"Эффективная работа с легаси-кодом" Майкла Физерса
-		</a>
-	</h1>
-	<p>Приёмы из этой книги мне помогают в работе, поэтому я решил составить по ней конспект. Примеры в ней написаны на Джаве и С++, поэтому не всё получилось перевести на Джаваскрипт. Я постарался вытянуть наиболее важное, но советую прочесть книгу и самим. Теперь к делу.</p>
-	<p>Физерс определяет легаси‑код, как код без тестов. В таком коде невозможно предсказать, сделает ли какое‑то изменение этот код лучше или хуже.</p>
-	<h2 id="-1-">Глава 1. Изменение софта</h2>
-	<p>Менять код нужно, чтобы:</p>
-	<ul>
-		<li>добавить фичу;</li>
-		<li>пофиксить баг;</li>
-		<li>улучшить дизайн кода;</li>
-		<li>оптимизировать использование ресурсов.</li>
-	</ul>
-	<p>В программе самое важное — её поведение. Пользователи любят, когда мы добавляем новое, и не любят, когда мы меняем старое. При добавлении нового поведения мы неизбежно меняем старое.</p>
-	<pre>
-		<code>
-			// до изменения
-			class Player {
-			addPlaylist(name, tracks) {
-
-			// после
-			class Player {
-			addPlaylist(name, tracks) {
-		</code>
-	</pre>
-	<p>Пока новый метод нигде не вызывается, поведение не меняется. Чтобы это поведение добавить, мы выводим кнопку на экране. Из‑за этого интерфейс отрисовывается на долю секунды дольше. Это незаметно, но поведение поменялось.</p>
-	<div class="peppermint">
-		<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/1.jpg'">
-			<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/1.jpg" alt="">
-		</figure>
-		<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/2.jpg')">
+<article class="post">
+	<main class="post__body">
+		<content class="post__content">
+			
+			<h1>
+				<a href="post.html">
+					"Эффективная работа с легаси-кодом" Майкла Физерса
+				</a>
+			</h1>
+			<p>Приёмы из этой книги мне помогают в работе, поэтому я решил составить по ней конспект. Примеры в ней написаны на Джаве и С++, поэтому не всё получилось перевести на Джаваскрипт. Я постарался вытянуть наиболее важное, но советую прочесть книгу и самим. Теперь к делу.</p>
 			<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/2.jpg" alt="">
-		</figure>
-		<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/3.jpg')">
-			<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/3.jpg" alt="">
-		</figure>
-		<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/5.jpg')">
-			<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/5.jpg" alt="">
-		</figure>
-		<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/6.jpg')">
-			<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/6.jpg" alt="">
-		</figure>
-		<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/7.jpg')">
-			<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/7.jpg" alt="">
-		</figure>
-		<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/8.jpg')">
-			<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/8.jpg" alt="">
-		</figure>
-		<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/9.jpg')">
-			<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/9.jpg" alt="">
-		</figure>
-		<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/10.jpg')">
-			<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/10.jpg" alt="">
-		</figure>
-	</div>
-	<p>Улучшение дизайна, рефакторинг, отличается тем, что не меняет поведение программы. Их цель — сделать код более читаемым, поддерживаемым и приятным.</p>
-	<p>Оптимизация похожа на рефакторинг, только рефакторим мы уже использование ресурсов, а не сам код.</p>
-	<p>Сохранить поведение неизменным трудно. Каждое изменение кода несёт риск изменения поведения. Чтобы смягчить риск, перед изменениями задавать себе три вопроса:</p>
-	<ul>
-		<li>что надо поменять?</li>
-		<li>как узнать, что мы внесли изменения правильно?</li>
-		<li>как узнать, что мы не сломали остальное?</li>
-	</ul>
-	<p>Разница между хорошими и плохими программными системами в том, что внесение изменений в хорошие не вызывает беспокойства. В плохих системах, чем дольше тянешь, тем страшнее менять в будущем.</p>
+			<p>Физерс определяет легаси‑код, как код без тестов. В таком коде невозможно предсказать, сделает ли какое‑то изменение этот код лучше или хуже.</p>
+			<h2 id="-1-">Глава 1. Изменение софта</h2>
+			<p>Менять код нужно, чтобы:</p>
+			<ul>
+				<li>добавить фичу;</li>
+				<li>пофиксить баг;</li>
+				<li>улучшить дизайн кода;</li>
+				<li>оптимизировать использование ресурсов.</li>
+			</ul>
+			<p>В программе самое важное — её поведение. Пользователи любят, когда мы добавляем новое, и не любят, когда мы меняем старое. При добавлении нового поведения мы неизбежно меняем старое.</p>
+			<pre>
+				<code>
+					// до изменения
+					class Player {
+					addPlaylist(name, tracks) {
 
-	<p>Лишняя переменная исчезла, но вместе с этим <em>alpha++</em> вызвалось 5 раз вместо 1. Юнит‑тесты помогут выявить это изменение.</p>
-	<h2 id="-">В следующий раз</h2>
-	<p>Поговорим об изменении кода, когда не хватает времени, добавлении фич, <span class="smallcaps">ТДД</span> и зависимостях.</p>
-	<h2 id="-">Ссылки по теме</h2>
-	<ul>
-		<li><a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D1%8C%D0%BD%D0%BE%D0%B5_%D1%82%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5">Юнит‑тестирование</a></li>
-		<li><a href="https://stackoverflow.com/questions/346372/whats-the-difference-between-faking-mocking-and-stubbing">Фиктивные объекты: стабы, моки</a></li>
-		<li><a href="http://www.mockator.com/projects/mockator/wiki/Refactoring_Towards_Seams">Модель швов</a></li>
-	</ul>
-	<footer class="post-meta">
-		<script src="https://yastatic.net/share2/share.js" async="async"></script>
-		<div class="ya-share2" data-services="vkontakte,facebook,twitter,telegram" data-counter=""></div>
-		<time>24 августа 2018</time>
-		<a href="https://bespoyasov.ru/tag/dev" class="has-black-color">Разработка</a>
-		<a href="https://bespoyasov.ru/tag/books" class="has-black-color">Книги</a>
-		<a href="https://bespoyasov.ru/tag/summary" class="has-black-color">Конспект</a>
-	</footer>
-	<menu class="post-nav">
-		<a href="post.html" class="has-undecor-symbol">←&nbsp;<span>Обработка ошибок в&nbsp;асинхронных функциях</span></a>
-		
-		<a href="post.html" class="has-undecor-symbol"><span>Рига<span class="typograf-oa-comma">,</span><span class="typograf-oa-comma-sp"> </span>март 2018</span>&nbsp;→</a>
-	</menu>
-</main>
+					// после
+					class Player {
+					addPlaylist(name, tracks) {
+				</code>
+			</pre>
+			<p>Пока новый метод нигде не вызывается, поведение не меняется. Чтобы это поведение добавить, мы выводим кнопку на экране. Из‑за этого интерфейс отрисовывается на долю секунды дольше. Это незаметно, но поведение поменялось.</p>
+			<div class="peppermint">
+				<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/1.jpg'">
+					<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/1.jpg" alt="">
+				</figure>
+				<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/2.jpg')">
+					<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/2.jpg" alt="">
+				</figure>
+				<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/3.jpg')">
+					<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/3.jpg" alt="">
+				</figure>
+				<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/5.jpg')">
+					<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/5.jpg" alt="">
+				</figure>
+				<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/6.jpg')">
+					<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/6.jpg" alt="">
+				</figure>
+				<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/7.jpg')">
+					<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/7.jpg" alt="">
+				</figure>
+				<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/8.jpg')">
+					<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/8.jpg" alt="">
+				</figure>
+				<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/9.jpg')">
+					<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/9.jpg" alt="">
+				</figure>
+				<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/10.jpg')">
+					<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/10.jpg" alt="">
+				</figure>
+			</div>
+			<p>Улучшение дизайна, рефакторинг, отличается тем, что не меняет поведение программы. Их цель — сделать код более читаемым, поддерживаемым и приятным.</p>
+			<p>Оптимизация похожа на рефакторинг, только рефакторим мы уже использование ресурсов, а не сам код.</p>
+			<p>Сохранить поведение неизменным трудно. Каждое изменение кода несёт риск изменения поведения. Чтобы смягчить риск, перед изменениями задавать себе три вопроса:</p>
+			<ul>
+				<li>что надо поменять?</li>
+				<li>как узнать, что мы внесли изменения правильно?</li>
+				<li>как узнать, что мы не сломали остальное?</li>
+			</ul>
+			<p>Разница между хорошими и плохими программными системами в том, что внесение изменений в хорошие не вызывает беспокойства. В плохих системах, чем дольше тянешь, тем страшнее менять в будущем.</p>
+
+			<p>Лишняя переменная исчезла, но вместе с этим <em>alpha++</em> вызвалось 5 раз вместо 1. Юнит‑тесты помогут выявить это изменение.</p>
+			<h2 id="-">В следующий раз</h2>
+			<p>Поговорим об изменении кода, когда не хватает времени, добавлении фич, <span class="smallcaps">ТДД</span> и зависимостях.</p>
+			<h2 id="-">Ссылки по теме</h2>
+			<ul>
+				<li><a href="#">Юнит‑тестирование</a></li>
+				<li><a href="#">Фиктивные объекты: стабы, моки</a></li>
+				<li><a href="#">Модель швов</a></li>
+			</ul>
+		</content>
+		<footer class="post__footer">
+			<script src="https://yastatic.net/share2/share.js" async="async"></script>
+			<div class="ya-share2" data-services="vkontakte,facebook,twitter,telegram" data-counter=""></div>
+			<time>24 августа 2018</time>
+			<a href="#">Разработка</a>
+			<a href="#">Книги</a>
+			<a href="#">Конспект</a>
+		</footer>
+		<menu class="post__nav">
+			<a href="post.html">
+				←
+				<span>Обработка ошибок в асинхронных функциях</span>
+			</a>
+			
+			<a href="post.html">
+				<span>Рига,март 2018</span>
+				→
+			</a>
+		</menu>
+	</main>
+</article>

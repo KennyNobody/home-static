@@ -1,5 +1,16 @@
 @import "modules/header/header";
+@import "modules/logo/logo";
 @import "modules/footer/footer";
+@import "modules/peppermint/peppermint";
+@import "modules/project/project";
+@import "modules/projects/projects";
+
 @import "modules/mainPage/mainPage";
-@import "modules/blogPage/blogPage";
-@import "modules/projectsPage/projectsPage";
+@import "modules/blog/blog";
+@import "modules/post/post";
+
+@import "modules/frontBlog/frontBlog";
+@import "modules/frontProjects/frontProjects";
+
+// Далее идет все, что касается галереи
+@import "modules/gallery/gallery";

@@ -1,50 +1,22 @@
 <header class="header">
-	<div class="container">
-		<div class="grid">
-			<div class="grid__col">
-
-				<!-- Только для главной страницы -->
-				<div>
-					<a href="/" class="logo__link">
-						<span class="logo">
-							<h1 class="logo__main">Егор Бадулин (kenny_nobody)</h1>
-							<div class="logo__photo" role="banner">
-								<img class="logo__img" alt="Фотография" src="/img/my-photo.jpg">
-							</div>
-						</span>
-					</a>
-				</div>
-
-				<!-- Только для != главной страницы -->
-<!-- 				<div>
-					<span class="logo">
-						<h1 class="logo__main">Егор Бадулин (kenny_nobody)</h1>
-						<div class="logo__photo" role="banner">
-							<img class="logo__img" alt="Фотография" src="/img/my-photo.jpg">
-						</div>
-					</span>
-				</div> -->
-				<nav>
-					<ul>
-						<li><a href="blog.html">Блог</a></li>
-						<li><a href="projects.html">Проекты</a></li>
-						<li><a href="mailto:nobodykenny@gmail.com" title="nobodykenny@gmail.com">Почта</a></li>
-						<li><a href="https://telegram.me/Kenny_Nobody" title="https://telegram.me/Kenny_Nobody">Телеграм</a></li>
-					</ul>
-				</nav>
-			</div>
-			<!-- Только для главной страницы -->
-			<div class="grid__col header__about" role="main">
-				<div class="header__col">
-					<p>Веб-разработчик из России</p>
-					<p>Занимаюсь версткой и фронтендом</p>
-					<p>Пытаюсь разобраться в современных технологиях и делюсь результатами и выводами</p>
-				</div>
-				<div class="header__col">
-					<p>Часто переезжаю. Рассказываю в блоге о местах, где довелось побывать, и интересных людях, встретившихся на пути</p>
-					<p>Выкладываю переводы интересных статей, найденных на просторах англоязычного интернета</p>
-				</div>
-			</div>
-		</div>
+	<div class="header__col">
+		@@include("../logo/logo.html")
+		<nav class="header__nav">
+			<a class="header__link" href="blog.html">Блог</a>
+			<a class="header__link" href="projects.html">Проекты</a>
+			<a class="header__link" href="gallery.html">Фотопроекты</a>
+			<a class="header__link" href="mailto:nobodykenny@gmail.com" title="nobodykenny@gmail.com">Почта</a>
+			<a class="header__link" href="https://telegram.me/Kenny_Nobody" title="https://telegram.me/Kenny_Nobody">Телеграм</a>
+		</nav>
+	</div>
+	<!-- Только для главной страницы -->
+	<div class="header__col header__col--25">
+		<p>Веб-разработчик из России</p>
+		<p>Занимаюсь версткой и фронтендом</p>
+		<p>Пытаюсь разобраться в современных технологиях и делюсь результатами и выводами</p>
+	</div>
+	<div class="header__col header__col--25">
+		<p>Часто переезжаю. Рассказываю в блоге о местах, где довелось побывать, и интересных людях, встретившихся на пути</p>
+		<p>Выкладываю переводы интересных статей, найденных на просторах англоязычного интернета</p>
 	</div>
 </header>

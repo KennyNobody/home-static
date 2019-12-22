@@ -1,0 +1,35 @@
+.projects {
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+		@include r(840) {
+			padding-bottom: 20px;
+		}
+		@include r(640) {
+			padding-bottom: 0px;
+		}
+	}
+	&__col {
+		width: 25%;
+		padding-right: 20px;
+		margin-bottom: .6rem;
+		&:nth-child(4n) {
+			padding-right: 0px;
+		}
+		@include r(840) {
+			width: 50%;
+			&:nth-child(2n+1){
+				padding-right: 20px;
+			}
+			&:nth-child(2n) {
+				padding-right: 0px;
+			}
+		}
+		@include r(640) {
+			width: 100%;
+			&:nth-child(1n) {
+				padding-right: 0px;
+			}
+		}
+	}
+}

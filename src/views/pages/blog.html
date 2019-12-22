@@ -25,39 +25,13 @@
 	<link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
 	<link rel="stylesheet" href="../styles/main.css">
 </head>
-<body>
+<body class="body">
 	<div class="page">
 		@@include("../../blocks/modules/header/header.html")
-		<div class="center posts">
+		<div class="posts">
 			
 			<!-- Несколько постов -->
-			<!-- @@include("../../blocks/modules/post/post.html") -->
-			<article class="post">
-				<div class="post-body">
-					<h1>
-						<a href="post.html"><?php the_title() ?></a>
-					</h1>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-					<p>
-						Контент поста
-					</p>
-					<br>
-					<br>
-					<br>
-					<br>
-					<br>
-				</div>
-				<footer class="post-meta">
-					<time>15.08.2018</time>
-					<a href="https://bespoyasov.ru/tag/dev" class="has-black-color">Разработка</a>
-					<a href="https://bespoyasov.ru/tag/books" class="has-black-color">Книги</a>
-					<a href="https://bespoyasov.ru/tag/summary" class="has-black-color">Конспект</a>
-				</footer>
-			</article>
+			@@include("../../blocks/modules/post/post.html")
 			
 			<menu class="posts-nav">
 				<a href="http://www.kenny-nobody.ru/blog/">

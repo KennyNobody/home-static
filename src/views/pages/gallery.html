@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Галерея</title>
+	<meta name="theme-color" content="#fff">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="shortcut icon" href="../img/favicons/favicon.ico" type="image/x-icon">
+	<link rel="icon" sizes="16x16" href="../img/favicons/favicon-16x16.png" type="image/png">
+	<link rel="icon" sizes="32x32" href="../img/favicons/favicon-32x32.png" type="image/png">
+	<link rel="apple-touch-icon-precomposed" href="../img/favicons/apple-touch-icon-precomposed.png">
+	<link rel="apple-touch-icon" href="../img/favicons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="../img/favicons/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="../img/favicons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="../img/favicons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="../img/favicons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="../img/favicons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../img/favicons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="../img/favicons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../img/favicons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="167x167" href="../img/favicons/apple-touch-icon-167x167.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="../img/favicons/apple-touch-icon-180x180.png">
+	<link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
+	<link rel="stylesheet" href="../styles/main.css">
+</head>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css"> -->
+
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script> -->
+<body class="body">
+	<div class="page">
+		@@include("../../blocks/modules/header/header.html")
+
+		<button id="btn">Открыть слайдер</button>
+
+		<!-- Root element of PhotoSwipe. Must have class pswp. -->
+		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    		<!-- Background of PhotoSwipe. 
+    		It's a separate element as animating opacity is faster than rgba(). -->
+    		<div class="pswp__bg"></div>
+
+    		<!-- Slides wrapper with overflow:hidden. -->
+    		<div class="pswp__scroll-wrap">
+
+		        <!-- Container that holds slides. 
+		            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+		            Don't modify these 3 pswp__item elements, data is added later on. -->
+		            <div class="pswp__container">
+		            	<div class="pswp__item"></div>
+		            	<div class="pswp__item"></div>
+		            	<div class="pswp__item"></div>
+		            </div>
+
+		            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+		            <div class="pswp__ui pswp__ui--hidden">
+
+		            	<div class="pswp__top-bar">
+
+		            		<!--  Controls are self-explanatory. Order can be changed. -->
+
+		            		<div class="pswp__counter"></div>
+
+		            		<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+		            		<button class="pswp__button pswp__button--share" title="Share"></button>
+
+		            		<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+		            		<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+		            		<!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+		            		<!-- element will get class pswp__preloader--active when preloader is running -->
+		            		<div class="pswp__preloader">
+		            			<div class="pswp__preloader__icn">
+		            				<div class="pswp__preloader__cut">
+		            					<div class="pswp__preloader__donut"></div>
+		            				</div>
+		            			</div>
+		            		</div>
+		            	</div>
+
+		            	<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+		            		<div class="pswp__share-tooltip"></div> 
+		            	</div>
+
+		            	<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+		            	</button>
+
+		            	<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+		            	</button>
+
+		            	<div class="pswp__caption">
+		            		<div class="pswp__caption__center"></div>
+		            	</div>
+
+		            </div>
+
+		        </div>
+
+		    </div>
+
+		    <script>
+		    		
+		</script>
+
+		<!-- <article class="post">
+			<main class="post__body">
+				<content class="post__content">
+
+					<h1>
+						<a href="post.html">
+							"Эффективная работа с легаси-кодом" Майкла Физерса
+						</a>
+					</h1>
+					<p>Приёмы из этой книги мне помогают в работе, поэтому я решил составить по ней конспект. Примеры в ней написаны на Джаве и С++, поэтому не всё получилось перевести на Джаваскрипт. Я постарался вытянуть наиболее важное, но советую прочесть книгу и самим. Теперь к делу.</p>
+					<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/2.jpg" alt="">
+					<p>Физерс определяет легаси‑код, как код без тестов. В таком коде невозможно предсказать, сделает ли какое‑то изменение этот код лучше или хуже.</p>
+					<h2 id="-1-">Глава 1. Изменение софта</h2>
+					<p>Менять код нужно, чтобы:</p>
+					<ul>
+						<li>добавить фичу;</li>
+						<li>пофиксить баг;</li>
+						<li>улучшить дизайн кода;</li>
+						<li>оптимизировать использование ресурсов.</li>
+					</ul>
+					<p>В программе самое важное — её поведение. Пользователи любят, когда мы добавляем новое, и не любят, когда мы меняем старое. При добавлении нового поведения мы неизбежно меняем старое.</p>
+					<pre>
+						<code>
+							// до изменения
+							class Player {
+							addPlaylist(name, tracks) {
+
+							// после
+							class Player {
+							addPlaylist(name, tracks) {
+						</code>
+					</pre>
+					<p>Пока новый метод нигде не вызывается, поведение не меняется. Чтобы это поведение добавить, мы выводим кнопку на экране. Из‑за этого интерфейс отрисовывается на долю секунды дольше. Это незаметно, но поведение поменялось.</p>
+					<div class="peppermint">
+						<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/1.jpg'">
+							<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/1.jpg" alt="">
+						</figure>
+						<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/2.jpg')">
+							<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/2.jpg" alt="">
+						</figure>
+						<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/3.jpg')">
+							<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/3.jpg" alt="">
+						</figure>
+						<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/5.jpg')">
+							<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/5.jpg" alt="">
+						</figure>
+						<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/6.jpg')">
+							<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/6.jpg" alt="">
+						</figure>
+						<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/7.jpg')">
+							<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/7.jpg" alt="">
+						</figure>
+						<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/8.jpg')">
+							<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/8.jpg" alt="">
+						</figure>
+						<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/9.jpg')">
+							<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/9.jpg" alt="">
+						</figure>
+						<figure style="background: url('http://www.kenny-nobody.ru/wp-content/uploads/2019/06/10.jpg')">
+							<img src="http://www.kenny-nobody.ru/wp-content/uploads/2019/06/10.jpg" alt="">
+						</figure>
+					</div>
+					<p>Улучшение дизайна, рефакторинг, отличается тем, что не меняет поведение программы. Их цель — сделать код более читаемым, поддерживаемым и приятным.</p>
+					<p>Оптимизация похожа на рефакторинг, только рефакторим мы уже использование ресурсов, а не сам код.</p>
+					<p>Сохранить поведение неизменным трудно. Каждое изменение кода несёт риск изменения поведения. Чтобы смягчить риск, перед изменениями задавать себе три вопроса:</p>
+					<ul>
+						<li>что надо поменять?</li>
+						<li>как узнать, что мы внесли изменения правильно?</li>
+						<li>как узнать, что мы не сломали остальное?</li>
+					</ul>
+					<p>Разница между хорошими и плохими программными системами в том, что внесение изменений в хорошие не вызывает беспокойства. В плохих системах, чем дольше тянешь, тем страшнее менять в будущем.</p>
+
+					<p>Лишняя переменная исчезла, но вместе с этим <em>alpha++</em> вызвалось 5 раз вместо 1. Юнит‑тесты помогут выявить это изменение.</p>
+					<h2 id="-">В следующий раз</h2>
+					<p>Поговорим об изменении кода, когда не хватает времени, добавлении фич, <span class="smallcaps">ТДД</span> и зависимостях.</p>
+					<h2 id="-">Ссылки по теме</h2>
+					<ul>
+						<li><a href="#">Юнит‑тестирование</a></li>
+						<li><a href="#">Фиктивные объекты: стабы, моки</a></li>
+						<li><a href="#">Модель швов</a></li>
+					</ul>
+				</content>
+				<footer class="post__footer">
+					<script src="https://yastatic.net/share2/share.js" async="async"></script>
+					<div class="ya-share2" data-services="vkontakte,facebook,twitter,telegram" data-counter=""></div>
+					<time>24 августа 2018</time>
+					<a href="#">Разработка</a>
+					<a href="#">Книги</a>
+					<a href="#">Конспект</a>
+				</footer>
+				<menu class="post__nav">
+					<a href="post.html">
+						←
+						<span>Обработка ошибок в асинхронных функциях</span>
+					</a>
+
+					<a href="post.html">
+						<span>Рига,март 2018</span>
+						→
+					</a>
+				</menu>
+			</main>
+		</article> -->
+
+		@@include("../../blocks/modules/footer/footer.html")
+		<script src="../js/main.js"></script>
+		<!-- <script src="../js/vendor.js"></script> -->
+	</div>
+</body>
+</html>

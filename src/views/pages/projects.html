@@ -25,126 +25,40 @@
 	<link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
 	<link rel="stylesheet" href="../styles/main.css">
 </head>
-<body>
+<body class="body">
 	<div class="page">
 		@@include("../../blocks/modules/header/header.html")
 		<main>
-			<section class="center projects">
-				<h1>Проекты</h1>
-				<ul class="projects-list">
-					<li class="projects-item">
-						<a href="post.html">
-							<figure>
-								<picture>
-									<img src="http://www.kenny-nobody.ru/wp-content/uploads/2018/11/Screenshot_3.jpg" alt="">
-								</picture>
-								<figcaption>
-									<span>
-										DelvigTech
-									</span>
-								</figcaption>
-							</figure>
-						</a>
-					</li>
-					<li class="projects-item">
-						<a href="post.html">
-							<figure>
-								<picture>
-									<img src="http://www.kenny-nobody.ru/wp-content/uploads/2018/11/Screenshot_3.jpg" alt="">
-								</picture>
-								<figcaption>
-									<span>
-										DelvigTech
-									</span>
-								</figcaption>
-							</figure>
-						</a>
-					</li>
-					<li class="projects-item">
-						<a href="post.html">
-							<figure>
-								<picture>
-									<img src="http://www.kenny-nobody.ru/wp-content/uploads/2018/11/Screenshot_3.jpg" alt="">
-								</picture>
-								<figcaption>
-									<span>
-										DelvigTech
-									</span>
-								</figcaption>
-							</figure>
-						</a>
-					</li>
-					<li class="projects-item">
-						<a href="post.html">
-							<figure>
-								<picture>
-									<img src="http://www.kenny-nobody.ru/wp-content/uploads/2018/11/Screenshot_3.jpg" alt="">
-								</picture>
-								<figcaption>
-									<span>
-										DelvigTech
-									</span>
-								</figcaption>
-							</figure>
-						</a>
-					</li>
-					<li class="projects-item">
-						<a href="post.html">
-							<figure>
-								<picture>
-									<img src="http://www.kenny-nobody.ru/wp-content/uploads/2018/11/Screenshot_3.jpg" alt="">
-								</picture>
-								<figcaption>
-									<span>
-										DelvigTech
-									</span>
-								</figcaption>
-							</figure>
-						</a>
-					</li>
-					<li class="projects-item">
-						<a href="post.html">
-							<figure>
-								<picture>
-									<img src="http://www.kenny-nobody.ru/wp-content/uploads/2018/11/Screenshot_3.jpg" alt="">
-								</picture>
-								<figcaption>
-									<span>
-										DelvigTech
-									</span>
-								</figcaption>
-							</figure>
-						</a>
-					</li>
-					<li class="projects-item">
-						<a href="post.html">
-							<figure>
-								<picture>
-									<img src="http://www.kenny-nobody.ru/wp-content/uploads/2018/11/Screenshot_3.jpg" alt="">
-								</picture>
-								<figcaption>
-									<span>
-										DelvigTech
-									</span>
-								</figcaption>
-							</figure>
-						</a>
-					</li>
-					<li class="projects-item">
-						<a href="post.html">
-							<figure>
-								<picture>
-									<img src="http://www.kenny-nobody.ru/wp-content/uploads/2018/11/Screenshot_3.jpg" alt="">
-								</picture>
-								<figcaption>
-									<span>
-										DelvigTech
-									</span>
-								</figcaption>
-							</figure>
-						</a>
-					</li>
-				</ul>
+			<section class="projects">
+				<h2 class="title">
+					Проекты
+				</h2>
+				<div class="projects__grid">
+					<div class="projects__col">
+						@@include("../../blocks/modules/project/project.html")
+					</div>
+					<div class="projects__col">
+						@@include("../../blocks/modules/project/project.html")
+					</div>
+					<div class="projects__col">
+						@@include("../../blocks/modules/project/project.html")
+					</div>
+					<div class="projects__col">
+						@@include("../../blocks/modules/project/project.html")
+					</div>
+					<div class="projects__col">
+						@@include("../../blocks/modules/project/project.html")
+					</div>
+					<div class="projects__col">
+						@@include("../../blocks/modules/project/project.html")
+					</div>
+					<div class="projects__col">
+						@@include("../../blocks/modules/project/project.html")
+					</div>
+					<div class="projects__col">
+						@@include("../../blocks/modules/project/project.html")
+					</div>
+				</div>
 			</section>
 		</main>
 		@@include("../../blocks/modules/footer/footer.html")

@@ -1,36 +1,18 @@
-body {
-	font-size: 14px;
-	min-width: 320px;
-	position: relative;
-	line-height: 1.75;
-}
-
-
-@include r(800) {
-	
-}
-
-$font-regular: "LatoRegular";
-$font-bold: "LatoBold";
-$red: #a03000;
-$blue: #0064a8;
-$red-transparent: rgba(160, 48, 0, .3);
-$blue-transparent: rgba(0, 100, 168, .2);
-$grey-light: rgba(0, 0, 0, .1);
-$grey-lighter: rgba(0, 0, 0, .2);
-$grey-normal: rgba(0, 0, 0, .3);
-$grey-dark: rgba(0, 0, 0, .6);
-$white-transparent-1: hsla(0, 0%, 100%, .5);
-$white-transparent-2: hsla(0, 0%, 100%, .9);
-$white: #fff;
-$black: #000;
-
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0
 }
 
+.body {
+	font-size: 14px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.75;
+	@include r(1000) {
+		font-size: 14px;
+	}
+}
 
 html {
 	line-height: 1.4em;
@@ -50,25 +32,23 @@ h6 {
 }
 
 h1 {
-	font-size: 2.45rem;
-	line-height: 2.8rem
+	font-size: 3rem;
+	line-height: 1.2em;
+	margin-bottom: 2rem;
 }
 
-h1,
 h2 {
-	margin-bottom: .6rem
-}
-@media (max-width:720px) {
-	h1 {
+	font-size: 2.45rem;
+	line-height: 2.8rem;
+	@include r(720) {
 		font-size: 2.3rem;
 		line-height: 2.7rem
 	}
 }
 
+h1,
 h2 {
-	font-size: 3rem;
-	line-height: 1.2em;
-	margin-bottom: 2rem;
+	margin-bottom: .6rem
 }
 
 h3 {
@@ -211,8 +191,6 @@ a .logo:hover {
 	color: $red
 }
 
-
-
 .icon-svg {
 	display: inline-block;
 	height: 1em;
@@ -221,55 +199,4 @@ a .logo:hover {
 	stroke: inherit;
 }
 
-.is-visually-hidden {
-	position: absolute!important;
-	clip: rect(1px 1px 1px 1px);
-	clip: rect(1px, 1px, 1px, 1px);
-	padding: 0!important;
-	border: 0!important;
-	height: 1px!important;
-	width: 1px!important;
-	overflow: hidden
-}
-
-.smallcaps {
-	font-size: .875em;
-	letter-spacing: .15em;
-	margin-right: -.15em
-}
-
-@media (max-width:1000px) {
-	html {
-		font-size: 14px
-	}
-}
-
-.wrap.is-relative {
-	position: relative
-}
-
-.notFound {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	min-height: 200px
-}
-
-.notFound-content {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	margin-top: 50px;
-	width: 320px;
-	text-align: center;
-	font-size: 1rem
-}
-
-.notFound h2 {
-	width: 100%;
-	font-size: 10rem;
-	line-height: .8em
-}
 
