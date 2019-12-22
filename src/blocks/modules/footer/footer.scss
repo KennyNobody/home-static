@@ -1,0 +1,96 @@
+.footer {
+	padding: 20px 0px;
+	font-size: .85rem;
+	line-height: 1.2rem;
+	font-family: $font-bold;
+	color: var(--grey-dark);
+	flex-grow: 1;
+	display: flex;
+	align-items: flex-end;
+	&__wrap {
+		display: flex;
+		align-items: flex-end;
+		flex-grow: 1;
+		justify-content: space-between;
+		@include r(400) {
+			align-items: flex-start;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+	}
+}
+
+.social {
+	&__link {
+		display: inline-block;
+		vertical-align: middle;
+		min-width: 26px;
+		text-align: center;
+		border: 0;
+		&:first-child {
+			margin-left: -5px;
+		}
+	}
+	svg {
+		display: inline-block;
+		vertical-align: middle;
+		margin: auto;
+		height: auto;
+		opacity: .5;
+		transition: opacity .2s;
+		max-width: 18px;
+		max-height: 18px;
+		&:hover {
+			opacity: 1;
+			transition: 0;
+		}
+	}
+	.i-twitter {
+		margin-top: -1px;
+		width: 30px;
+	}
+	.i-vk {
+		max-width: 20px;
+		width: 20px;
+	}
+	.i-github {
+		margin-left: -4px;
+		margin-right: -3px;
+		width: 28px;
+		margin: 0 3px 0 -3px;
+	}
+	.i-instagram {
+		max-width: 16px;
+		width: 28px;
+	}
+	.i-rss {
+		max-width: 16px;
+		margin-left: 2px;
+	}
+	.i-telegram {
+		margin-left: -3px;
+		width: 17px;
+		margin: 0 2px 0 -2px;
+	}
+	.i-mail {
+		width: 27px;
+	}
+}
+
+.copyright {
+	color: $grey-dark;
+	display: block;
+	font-family: $font-bold;
+	@include r(480) {
+		display: none;
+	}
+	&__dates {
+		display: block;
+	}
+	a {
+		color: $grey-dark;
+		&:hover {
+			color: $black;
+		}
+	}
+}

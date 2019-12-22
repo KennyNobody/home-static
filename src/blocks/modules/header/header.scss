@@ -1,0 +1,143 @@
+.header {
+	padding: 40px 0 55px;
+	font-family: "LatoRegular";
+	@include r(1000) {
+		padding: 35px 0 45px;
+	}
+	@include r(640) {
+		padding: 30px 0;
+	}
+	&__col {
+		padding-right: 25px;
+		width: 50%;
+		@include r(1160) {
+			width: 85%;
+		}
+		@include r(860) {
+			width: 50%;
+		}
+		@include r(640) {
+			width: 100%;
+			padding: 0;
+			&:first-child {
+				padding-bottom: .6rem;
+			}
+		}
+	}
+	&__about {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		@include r(860) {
+			width: 100%;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+		}
+		@include r(640) {
+			width: 100%;
+			display: block;
+		}
+	}
+	.grid__col {
+		@include r(860) {
+			width: 100%;
+			&:first-child {
+				padding-bottom: 20px;
+			}
+		}
+	}
+}
+
+.logo {
+	position: relative;
+	display: inline-block;
+	padding-left: 70px;
+	margin-top: 0;
+	border: 0;
+	@include r(1160) {
+		-webkit-box-pack: end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+	}
+	@include r(1000) {
+		padding-left: 60px;
+		max-width: 300px;
+	}
+	@include r(640) {
+		padding-left: 0;
+		max-width: 250px;
+	}
+	&__main {
+		display: block;
+		font-weight: bold;
+		font-weight: 700;
+		font-size: 1.1rem;
+		line-height: 1.4rem;
+		margin: 0;
+		@include r(1000) {
+			font-size: 1.3rem;
+		}
+		@include r(640) {
+			font-size: 1.6rem;
+			margin-bottom: .5rem;
+		}
+	}
+	&__photo {
+		position: absolute;
+		top: -5px;
+		left: -5px;
+		width: 60px;
+		height: 60px;
+		overflow: hidden;
+		border-radius: 50%;
+		@include r(1000) {
+			width: 52px;
+			height: 52px;
+		}
+		@include r(640) {
+			display: none;
+		}
+	}
+	&__img {
+		display: block;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+	&__link {
+		border: 0;
+	}
+}
+
+nav {
+	margin-top: -1px;
+	padding-left: 70px;
+	font-size: 1rem;
+	@include r(1000) {
+		padding-left: 60px;
+	}
+	@include r(640) {
+		padding-left: 0;
+	}
+}
+ul {
+	list-style: none;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex
+}
+li {
+	list-style: none;
+	margin-right: .6rem;
+}
+a {
+	color: $blue;
+	border-bottom: 1px solid $blue-transparent;
+	&:hover {
+		color: var(--red);
+		border-bottom-color: var(--red-transparent);
+	}
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>i-rss</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="i-rss" fill-rule="nonzero" fill="#333333">
+            <path d="M12.705,15.647 L15.647,15.647 C15.647,7.213 8.786,0.347 0.353,0.347 L0.353,3.281 C7.163,3.281 12.705,8.829 12.705,15.647 Z M2.39,15.652 C3.518,15.652 4.429,14.746 4.429,13.623 C4.429,12.506 3.518,11.59 2.39,11.59 C1.267,11.59 0.354,12.506 0.354,13.623 C0.353,14.746 1.266,15.652 2.39,15.652 Z M7.506,15.648 L7.506,15.648 L10.451,15.648 C10.451,10.078 5.92,5.547 0.352,5.547 L0.352,8.48 C2.262,8.48 4.057,9.226 5.409,10.58 C6.761,11.929 7.506,13.732 7.506,15.648 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
