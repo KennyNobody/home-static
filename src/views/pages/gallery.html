@@ -25,87 +25,122 @@
 	<link rel="apple-touch-icon" sizes="1024x1024" href="../img/favicons/apple-touch-icon-1024x1024.png">
 	<link rel="stylesheet" href="../styles/main.css">
 </head>
-<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css"> -->
-
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js"></script> -->
 <body class="body">
 	<div class="page">
 		@@include("../../blocks/modules/header/header.html")
+		<h2 class="title">
+			Мой Дагестан
+		</h2>
+		<a href="" class="link-prev">
+			←
+			<span>Назад</span>
+		</a>
+		<div class="gallery">
 
-		<button id="btn">Открыть слайдер</button>
+			<figure class="gallery__item">
+				<a class="gallery__link" href="https://sun9-25.userapi.com/c845016/v845016802/1d6f05/6RCr4oxVNrw.jpg" data-size="2560x1707">
+					<picture>
+						<source type="image/webp" srcset="img/img-1.webp">
+						<source type="image/jpeg" srcset="img/img-1.jpg">
+						<img src="img/img-1.jpg" alt="Sunrise Image">
+					</picture>
+				</a>
+				<figcaption class="gallery__title">Очень большое описание того, что происходит на фотографии где-то в высоких горах далекого Дагестана</figcaption>
 
-		<!-- Root element of PhotoSwipe. Must have class pswp. -->
+			</figure>
+
+			<figure class="gallery__item">
+				<a class="gallery__link" href="https://sun9-67.userapi.com/c850120/v850120488/116750/f01F3tmZQW8.jpg" data-size="2560x1707">
+					<picture>
+						<source type="image/webp" srcset="img/img-2.webp">
+						<source type="image/jpeg" srcset="img/img-2.jpg">
+						<img src="img/img-2.jpg" alt="Sunrise Image">
+					</picture>
+				</a>
+				<figcaption class="gallery__title">Image caption 2</figcaption>
+			</figure>
+
+			<figure class="gallery__item">
+				<a class="gallery__link" href="https://sun9-3.userapi.com/c853620/v853620359/ef09d/9IXBuMU_G30.jpg" data-size="2560x1707">
+					<picture>
+						<source type="image/webp" srcset="img/img-3.webp">
+						<source type="image/jpeg" srcset="img/img-3.jpg">
+						<img src="img/img-3.jpg" alt="Sunrise Image">
+					</picture>
+				</a>
+				<figcaption class="gallery__title">Image caption 3</figcaption>
+			</figure>
+
+			<figure class="gallery__item">
+				<a class="gallery__link" href="https://sun9-29.userapi.com/c856032/v856032245/119b76/1Kr4pTCe-cM.jpg" data-size="2560x1919">
+					<picture>
+						<source type="image/webp" srcset="img/img-4.webp">
+						<source type="image/jpeg" srcset="img/img-4.jpg">
+						<img src="img/img-4.jpg" alt="Sunrise Image">
+					</picture>
+				</a>
+				<figcaption class="gallery__title">Image caption 4</figcaption>
+			</figure>
+
+			<figure class="gallery__item">
+				<a class="gallery__link" href="https://sun9-45.userapi.com/c830209/v830209417/1850ab/Ve9eWlwtYhQ.jpg" data-size="1440x2160">
+					<picture>
+						<source type="image/webp" srcset="img/img-5.webp">
+						<source type="image/jpeg" srcset="img/img-5.jpg">
+						<img src="img/img-5.jpg" alt="Sunrise Image">
+					</picture>
+				</a>
+				<figcaption class="gallery__title">Image caption 3</figcaption>
+			</figure>
+		</div>
+		<br>
+		<br>
+		<br>
+		Ниже уже не нужно стрелку "назад", там пока непонятно что может быть, она должна быть где-то рядом с заголовком
+		<br>
+		<br>
+		<br>
+		<!-- Лейаут для слайдера -->
 		<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="pswp__bg"></div>
 
-    		<!-- Background of PhotoSwipe. 
-    		It's a separate element as animating opacity is faster than rgba(). -->
-    		<div class="pswp__bg"></div>
+			<div class="pswp__scroll-wrap">
+				<div class="pswp__container">
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+					<div class="pswp__item"></div>
+				</div>
+				<div class="pswp__ui pswp__ui--hidden">
 
-    		<!-- Slides wrapper with overflow:hidden. -->
-    		<div class="pswp__scroll-wrap">
+					<div class="pswp__top-bar">
+						<div class="pswp__counter"></div>
+						<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+						<button class="pswp__button pswp__button--share" title="Share"></button>
+						<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+						<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+						<div class="pswp__preloader">
+							<div class="pswp__preloader__icn">
+								<div class="pswp__preloader__cut">
+									<div class="pswp__preloader__donut"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+						<div class="pswp__share-tooltip"></div> 
+					</div>
+					<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+					</button>
+					<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+					</button>
+					<div class="pswp__caption">
+						<div class="pswp__caption__center"></div>
+					</div>
+				</div>
 
-		        <!-- Container that holds slides. 
-		            PhotoSwipe keeps only 3 of them in the DOM to save memory.
-		            Don't modify these 3 pswp__item elements, data is added later on. -->
-		            <div class="pswp__container">
-		            	<div class="pswp__item"></div>
-		            	<div class="pswp__item"></div>
-		            	<div class="pswp__item"></div>
-		            </div>
-
-		            <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
-		            <div class="pswp__ui pswp__ui--hidden">
-
-		            	<div class="pswp__top-bar">
-
-		            		<!--  Controls are self-explanatory. Order can be changed. -->
-
-		            		<div class="pswp__counter"></div>
-
-		            		<button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-
-		            		<button class="pswp__button pswp__button--share" title="Share"></button>
-
-		            		<button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-
-		            		<button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-
-		            		<!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
-		            		<!-- element will get class pswp__preloader--active when preloader is running -->
-		            		<div class="pswp__preloader">
-		            			<div class="pswp__preloader__icn">
-		            				<div class="pswp__preloader__cut">
-		            					<div class="pswp__preloader__donut"></div>
-		            				</div>
-		            			</div>
-		            		</div>
-		            	</div>
-
-		            	<div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-		            		<div class="pswp__share-tooltip"></div> 
-		            	</div>
-
-		            	<button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-		            	</button>
-
-		            	<button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-		            	</button>
-
-		            	<div class="pswp__caption">
-		            		<div class="pswp__caption__center"></div>
-		            	</div>
-
-		            </div>
-
-		        </div>
-
-		    </div>
-
-		    <script>
-		    		
-		</script>
+			</div>
+		</div>
+		<!-- Лейаут для слайдера -->
 
 		<!-- <article class="post">
 			<main class="post__body">

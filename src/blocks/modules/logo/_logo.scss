@@ -4,11 +4,6 @@
 	padding-left: 70px;
 	margin-top: 0;
 	border: 0;
-	color: $blue;
-	&:hover {
-		color: var(--red);
-		border-bottom-color: var(--red-transparent);
-	}
 	@include r(1160) {
 		-webkit-box-pack: end;
 		-ms-flex-pack: end;
@@ -62,3 +57,10 @@
 	}
 }
 
+a.logo {
+	color: $blue;
+	&:hover {
+		color: $red;
+		border-bottom-color: $red-transparent;
+	}
+}
