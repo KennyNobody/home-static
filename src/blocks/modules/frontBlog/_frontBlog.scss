@@ -13,6 +13,15 @@
 	&__title {
 		margin-bottom: 0;
 		font-family: $font-bold;
+		display: block;
+		color: $black;
+		border-bottom: none;
+		&:visited {
+			color: $black;
+		}
+		&:hover {
+			color: $red;
+		}
 	}
 	&__grid {
 		display: flex;
@@ -38,9 +47,6 @@
 				display: block;
 				padding-left: 0px;
 			}
-			&:nth-child(4) {
-				display: block;
-			}
 		}
 		@include r(640) {
 			width: 100%;
@@ -50,7 +56,7 @@
 				display: block;
 			}
 			&:nth-child(4) {
-				display: none;
+				display: block;
 			}
 			&:nth-child(3) {
 				display: none;
@@ -58,12 +64,6 @@
 		}
 		&:first-child {
 			padding-left: 0;
-		}
-		&--gray {
-			background: #F5F5EA;
-			@include r(640) {
-				background: none;
-			}
 		}
 	}
 	&__link {
