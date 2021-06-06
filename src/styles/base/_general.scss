@@ -9,6 +9,7 @@
 	min-width: 320px;
 	position: relative;
 	line-height: 1.75;
+	font-family: $font-regular;
 	@include r(1000) {
 		font-size: 14px;
 	}

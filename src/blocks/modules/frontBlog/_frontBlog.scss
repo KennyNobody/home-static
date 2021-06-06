@@ -16,12 +16,12 @@
 		display: block;
 		color: $black;
 		border-bottom: none;
-		&:visited {
-			color: $black;
-		}
-		&:hover {
-			color: $red;
-		}
+		// &:visited {
+		// 	color: $black;
+		// }
+		// &:hover {
+		// 	color: $red;
+		// }
 	}
 	&__grid {
 		display: flex;
